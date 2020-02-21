@@ -21,10 +21,8 @@ Edit the migration like below
 $ rails g migration add_type_to_users type:string
 ```
 
-``ruby
+```ruby
 # db/migrations/20200221021551_add_type_to_users.rb
-
-# frozen_string_literal: true
 
 class AddTypeToUsers < ActiveRecord::Migration[5.2]
   def change
