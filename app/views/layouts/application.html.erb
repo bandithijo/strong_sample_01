@@ -10,6 +10,23 @@
   </head>
 
   <body>
+    <nav style="margin-bottom:20px;">
+      <% if participant_signed_in? || sponsor_signed_in? %>
+        <%= link_to 'Home', root_path %> |
+      <% else %>
+        <%= link_to 'Home', root_path %> |
+        <%= link_to 'Participant', new_participant_session_path %> |
+        <%= link_to 'Sponsor', new_sponsor_session_path %>
+      <% end %>
+      <% if participant_signed_in? %>
+        <%= link_to 'Dashboard', dashboard_root_path %> |
+        <%= link_to 'Log out', destroy_participant_session_path, method: :delete %>
+      <% end %>
+      <% if sponsor_signed_in? %>
+        <%= link_to 'Dashboard', dashboard_root_path %> |
+        <%= link_to 'Log out', destroy_sponsor_session_path, method: :delete %>
+      <% end %>
+    </nav>
     <%= yield %>
   </body>
 </html>
