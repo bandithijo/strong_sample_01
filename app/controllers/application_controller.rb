@@ -13,11 +13,11 @@ class ApplicationController < ActionController::Base
 
   # The path used after sign up.
   def after_sign_up_path_for(resource_or_scope)
-    dashboard_root_path
+    resource_or_scope.is_a?(User) ? dashboard_root_path : root_path
   end
 
   # The path used after sign in.
   def after_sign_in_path_for(resource_or_scope)
-    dashboard_root_path
+    resource_or_scope.is_a?(User) ? dashboard_root_path : root_path
   end
 end
