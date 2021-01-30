@@ -145,8 +145,6 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
-    rb-kqueue (0.2.5)
-      ffi (>= 0.5.0)
     regexp_parser (1.7.0)
     responders (3.0.0)
       actionpack (>= 5.0)
@@ -216,7 +214,6 @@ DEPENDENCIES
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)
   rails (~> 5.2.4)
-  rb-kqueue (>= 0.2)
   sass-rails (~> 5.0)
   selenium-webdriver
   spring
@@ -227,7 +224,7 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 RUBY VERSION
-   ruby 2.6.3p62
+   ruby 2.7.2p137
 
 BUNDLED WITH
    2.1.4
